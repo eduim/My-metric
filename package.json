@@ -7,8 +7,8 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint"
+    "dev": "yarn dev:docker && turbo run dev --parallel",
+    "dev:docker": "docker-compose up -d"
   },
   "devDependencies": {
     "eslint-config-custom": "*",
