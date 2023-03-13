@@ -1,4 +1,4 @@
-# Server endpoints
+# Endpoints
 
 ## `GET /metrics` – Get a list of Presentations
 
@@ -8,10 +8,12 @@
 [
   {
     "id": 1234,
+    "createdAt": "2023-03-13T18:16:20.017Z",
     "name": "Conversion Rate"
   },
   {
     "id": 1235,
+    "createdAt": "2023-03-13T18:16:20.017Z",
     "name": "Revenue"
   }
 ]
@@ -57,12 +59,12 @@ Status 400 if already exists
   "values": [
     {
       "id": "a3bcef codb9-95a9-456b-a3d6-5508273adf32",
-      "timestamp": "2023-03-13T18:16:20.017Z",
+      "createdAt": "2023-03-13T18:16:20.017Z",
       "value": "0,72"
     },
     {
       "id": "a3bcefb9-95a9-456b-a3d6-5508273adf32",
-      "timestamp": "2023-03-13T18:16:20.019Z",
+      "createdAt": "2023-03-13T18:16:20.019Z",
       "value": "0,76"
     }
   ]
