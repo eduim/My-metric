@@ -14,7 +14,7 @@ datasource db {
 model Metric {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
-  name      String   @db.VarChar(255)
+  name      String   @unique
   values    Value[] 
 }
 
@@ -23,6 +23,6 @@ model Value {
   value     Int 
   createdAt DateTime @default(now())
   metric    Metric   @relation(fields: [metricId], references: [id])
-  metricId  Int      @unique
+  metricId  Int      
 }
 

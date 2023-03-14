@@ -9,8 +9,12 @@
     "express": "^4.18.2",
     "nodemon": "^2.0.21"
   },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
   "scripts": {
-    "dev": "nodemon ./src/index.js"
+    "dev": "nodemon ./src/index.js",
+    "dev:setup": "prisma migrate reset --force"
   },
   "devDependencies": {
     "prisma": "^4.11.0"
