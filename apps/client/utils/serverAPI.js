@@ -28,3 +28,5 @@ const serverAPI = {
     return data;
   },
 };
+
+export default serverAPI;
