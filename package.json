@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "setup": "yarn dev:docker up -d && d apps/server && yarn dev:setup",
+    "setup": "yarn dev:docker && cd apps/server && yarn dev:setup",
     "dev": "yarn dev:docker && turbo run dev --parallel",
     "dev:docker": "docker-compose up -d"
   },
