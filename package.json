@@ -7,8 +7,8 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "setup": "npm run dev:docker && cd apps/server && npm run dev:setup",
-    "dev": "npm run dev:docker && turbo run dev --parallel",
+    "setup": "yarn dev:docker && cd apps/server && yarn dev:setup",
+    "dev": "yarn dev:docker && turbo run dev --parallel",
     "dev:docker": "docker-compose up -d"
   },
   "devDependencies": {
@@ -20,5 +20,5 @@
     "node": ">=14.0.0"
   },
   "dependencies": {},
-  "packageManager": "npm@8.11.0"
+  "packageManager": "yarn@1.22.19"
 }
