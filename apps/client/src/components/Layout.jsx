@@ -9,19 +9,6 @@ function Layout() {
   const [metrics, setMetrics] = useState([]);
   const [selected, setSelected] = useState(1);
 
-  // const formatMetrics = (newMetrics) => {
-  //   setMetrics(
-  //     newMetrics.map((metric) => {
-  //       return {
-  //         id: metric.id,
-  //         name: metric.name,
-  //         current: metric.id === selected,
-  //         href: metric.id,
-  //       };
-  //     })
-  //   );
-  // };
-
   const getMetrics = async () => {
     const rawMetrics = await serverAPI.getMetrics();
     setMetrics(formatMetrics(rawMetrics, selected));
@@ -68,7 +55,7 @@ function Layout() {
           </div>
         </div>
         <div className="flex flex-1 flex-col sm:pl-64">
-          <Dashboard selected={selected} />
+          <Dashboard id={selected} />
         </div>
       </div>
     </>
