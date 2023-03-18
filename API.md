@@ -1,6 +1,6 @@
 # Endpoints
 
-## `GET /metrics` – Get a list of Presentations
+## `GET /metrics` – Get a list of metrics
 
 **Response**
 
@@ -19,7 +19,7 @@
 ]
 ```
 
-## `POST /metric` – Create a Presentation
+## `POST /metrics` – Create a metric
 
 **Request**
 
@@ -48,7 +48,30 @@ Status 400 if already exists
 }
 ```
 
-## `GET /metric/:id` – Get a presentation
+## `GET /metric/:id` – Get a metric
+
+**Response**
+
+```json
+{
+  "id": 1234,
+  "name": "CTR",
+  "values": [
+    {
+      "id": "a3bcef codb9-95a9-456b-a3d6-5508273adf32",
+      "createdAt": "2023-03-13T18:16:20.017Z",
+      "value": "0,72"
+    },
+    {
+      "id": "a3bcefb9-95a9-456b-a3d6-5508273adf32",
+      "createdAt": "2023-03-13T18:16:20.019Z",
+      "value": "0,76"
+    }
+  ]
+}
+```
+
+## `PATCH /metric/:id` – Update a metric with values
 
 **Response**
 
