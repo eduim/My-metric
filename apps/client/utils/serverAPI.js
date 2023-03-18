@@ -3,8 +3,7 @@ const BASE_URL = "http://localhost:8080";
 const serverAPI = {
   async getMetrics() {
     const response = await fetch(`${BASE_URL}/metrics`);
-    const data = await response.json();
-    return data;
+    return await response.json();
   },
 
   async pushMetrics(name) {
@@ -18,14 +17,23 @@ const serverAPI = {
       }),
     };
     const response = await fetch(`${BASE_URL}/metrics`, options);
-    const data = await response.json();
-    return data;
+    return await response.json();
   },
 
   async getMetric(id) {
     const response = await fetch(`${BASE_URL}/metrics/${id}`);
-    const data = await response.json();
-    return data;
+    return await response.json();
+  },
+
+  async updateMetric(id) {
+    const options = {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    const response = await fetch(`${BASE_URL}/metrics/${id}`, options);
+    return await response.json();
   },
 };
 
